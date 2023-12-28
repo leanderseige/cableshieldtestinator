@@ -24,6 +24,14 @@ The Cicruit uses a TL084 as an oscillator to generate a triangular waveform at a
 
 ![Block  diagram](images/schematic.png)
 
+## The Code
+
+The microcontroller rotates through the four possible states of the two relais and measures the voltage received by the coil. Larger differences between the four options indicate a shielded cable, similar values indicate an unshielded cable.
+
+## The Case
+
+I designed the case myself and printed it with my own 3D printer. I used recycled filament from [Recycle Fabrik](https://recyclingfabrik.com) in order to help avoiding plastic waste.
+
 
 
 
