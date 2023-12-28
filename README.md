@@ -16,6 +16,15 @@ A cable with two equal conductors (unshielded) should behave different from a ca
 
 It turned out that this approach oviously was good enough to separate shielded cables from unshielded ones.
 
+![Block  diagram](images/blockdiagram.png)
+
+## Circuit Diagram
+
+The Cicruit uses a TL084 as an oscillator to generate a triangular waveform at about 250 Hz. An ATMEGA328p microcontroller uses two relays to pass this signal through this or that wire. The cable under test is placed inside a coil. The coil itself is connected to another TL084 to amplify and smooth the signal. Finally, the microcontroller reads the analog signal and evaluates it.
+
+![Block  diagram](images/schematic.png)
+
+
 
 
 
