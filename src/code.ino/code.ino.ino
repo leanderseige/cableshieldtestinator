@@ -6,8 +6,9 @@ Cableshieldtestinator
 
 This is the software for a 
 
-
 */
+
+// #define DEBUG 1
 
 #include <SPI.h>
 #include <Wire.h>
@@ -24,6 +25,7 @@ int analogPin = A0; // Pin, der gelesen werden soll: Pin A3
 int val = 0; 
 
 int values[] = {-1,-1,-1,-1};
+int progress = -1;
 int delta=-1;
 int mode=0;
 
@@ -52,7 +54,7 @@ int getAValue() {
   return(retval/10);
 }
 
-int updateDisplay(int mode, int values[],int delta) {
+int updateDisplay() {
   display.clearDisplay();
   display.setTextColor(SSD1306_WHITE);
   display.cp437(true);
@@ -60,13 +62,18 @@ int updateDisplay(int mode, int values[],int delta) {
     display.setCursor(0, 0); 
     display.setTextSize(2);
     display.print("ANALYZING");
+    display.fillRect(0,16,progress,32,WHITE);
+#ifdef DEBUG
+    display.setTextColor(SSD1306_BLACK);
     display.setTextSize(1);
     for(int x=0;x<4;x++) {
-      display.setCursor(32*x,16); 
+      display.setCursor(32*x+2,16); 
       display.print(values[x]);
     }
-    display.setCursor(64, 20); 
+    display.setCursor(2, 24); 
     display.print(delta);
+    display.setTextColor(SSD1306_WHITE);
+#endif
   } else if(mode==2) {
     display.setCursor(0, 0); 
     display.setTextSize(2);
@@ -101,45 +108,51 @@ int updateDisplay(int mode, int values[],int delta) {
 */
 
 void loop() {
+
+  updateDisplay();
   
   while(digitalRead(8)) {
-    updateDisplay(mode,values,delta);
+    delay(10);
   }
 
   mode=1;
-
   values[0]=values[1]=values[2]=values[3]=-1;
   delta=-1;
+  progress=0;
 
-  updateDisplay(mode,values,delta);
+  updateDisplay();
 
   digitalWrite(1,0);
   digitalWrite(2,0);  
+  progress=32;
   delay(100);
   values[0] = getAValue();
 
-  updateDisplay(mode,values,delta);
+  updateDisplay();
 
   digitalWrite(1,0);
   digitalWrite(2,1);  
+  progress=64;
   delay(100);
   values[1] = getAValue();
 
-  updateDisplay(mode,values,delta);
+  updateDisplay();
 
   digitalWrite(1,1);
   digitalWrite(2,0);  
+  progress=96;
   delay(100);
   values[2] = getAValue();
 
-  updateDisplay(mode,values,delta);
+  updateDisplay();
 
   digitalWrite(1,1);
   digitalWrite(2,1);  
+  progress=128;
   delay(100);
   values[3] = getAValue();
 
-  updateDisplay(mode,values,delta);
+  updateDisplay();
 
   int max = -1;
   int min = 9999;
@@ -152,7 +165,7 @@ void loop() {
 
   mode=2;
 
-  updateDisplay(mode,values,delta);
+  updateDisplay();
 
   digitalWrite(1,0);
   digitalWrite(2,0);  
