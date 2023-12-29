@@ -14,9 +14,9 @@ The idea was to lay the cable through a coil, run a signal through to both of th
 
 A cable with two equal conductors (unshielded) should behave different from a cable where one conductor is wrapped around the other one (shielded).
 
-It turned out that this approach oviously was good enough to separate shielded cables from unshielded ones.
-
 ![Block  diagram](images/blockdiagram.png)
+
+It turned out that this approach oviously was good enough to separate shielded cables from unshielded ones.
 
 <img src="images/photo1.jpg" width="400"><img src="images/photo2.jpg" width="400">
 
