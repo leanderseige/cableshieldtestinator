@@ -1,12 +1,10 @@
 # CABLESHIELDTESTINATOR
 
-A post be [AudioPilz](https://www.youtube.com/@AudioPilz) from a while ago challanged me to build a device that non-invasively detects whether a cable is actually shielded or not. 
+A post be [AudioPilz](https://www.youtube.com/@AudioPilz) from a while ago challanged me to build a device that non-invasively detects whether a cable is actually shielded or not. From an economic point of view this device makes absolutely no sense. It was a just-for-fun project to find out whether it can be done or not. Once again I learned a lot.
 
-Cheap audio patch cables today often come unshielded. That means, that the second conductor (ground, the shield) is not actually a mesh of wires wrapped around the signal conductor (as I would expect it from cables for audio. Instead there are just two wires lying next to each other inside the coating.
+Cheap audio patch cables often come unshielded today. That means that the second conductor (ground, the shield) is not a mesh of wires wrapped around the signal conductor (as I would expect it from cables for audio). Instead there are just two wires lying next to each other inside the coating. So I was eager to find out whether a cable is shielded or not without cutting it. 
 
-So I was eager to find out whether a cable is shielded or not without cutting it.
-
-The final outcome of my product is some sort of proof-of-concept. In my opinion it does work. However, ist was not too easy to make it work...
+If you like my work and want to contact me for hardware or software related projects, head over to https://seige.digital
 
 ## The Idea
 
