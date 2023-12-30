@@ -8,7 +8,7 @@ Cheap audio patch cables often come unshielded. That means that the second condu
 
 ## The Idea
 
-The idea was to put the cable through a coil, run signals through both conductors alternating and measure the response that gets induced in the coil. 
+The idea was to put the cable through a coil, run signals through both conductors in an alternating way and measure the response that gets induced in the coil. 
 
 ![Block  diagram](images/blockdiagram.png)
 
