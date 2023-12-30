@@ -20,11 +20,11 @@ A cable with two equal conductors (unshielded) should behave different from a ca
 
 The cicruit uses a TL084 as an oscillator to generate a triangular waveform at about 250 Hz. An ATMEGA328p microcontroller uses two relays to pass this signal through this or that conductor of the cable which is placed inside a coil. The signals in the cable therefore induce weak currents in the coil. The coil itself is connected to another TL084 to amplify and smooth these signals. Finally, the microcontroller reads the analog signal and evaluates it.
 
+![Block  diagram](images/schematic.png)
+
 The signal generator uses a pair of transistors to amplify the signal to it's maximum. Theoretically (depending on the transistors) we run up to 12V through a 100 ohms resistor and so up to 120mA through the cable. This corresponds to about 1.44 watts.
 
 The large capacitors at the output of the signal receiver smooth out the signal very nicely for the ADC. However, the microcontoller must wait a second before measuring the voltage in order to let the signal reach it's final value. Maybe these capacitors could be reduced to a minimum which still guarantees a stable signal but reduces the time to reach it.
-
-![Block  diagram](images/schematic.png)
 
 ## Recycling
 
