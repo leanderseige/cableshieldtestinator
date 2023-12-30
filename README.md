@@ -6,11 +6,9 @@ Cheap audio patch cables often come unshielded. That means that the second condu
 
 ![cables](images/cables.png)
 
-If you like my work and want to contact me for hardware or software related projects, head over to https://seige.digital
-
 ## The Idea
 
-The idea was to lay the cable through a coil, run a signal through to both of the conductors alternating and measure the response that gets induced in the coil. 
+The idea was to put the cable through a coil, run a signal through to both of the conductors alternating and measure the response that gets induced in the coil. 
 
 A cable with two equal conductors (unshielded) should behave different from a cable where one conductor is wrapped around the other one (shielded).
 
@@ -33,6 +31,11 @@ The microcontroller rotates through the four possible states of the two relais a
 ## The Case
 
 I designed the case myself and printed it with my own 3D printer. I used recycled filament from [Recycle Fabrik](https://recyclingfabrik.com) in order to help avoiding plastic waste.
+
+## Contact 
+
+If you like my work and want to contact me for hardware or software related projects, head over to https://seige.digital
+
 
 
 
