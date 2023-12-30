@@ -2,7 +2,7 @@
 
 Recently a [post](https://www.instagram.com/audio.pilz/p/CvVS7SXtaue/) by AudioPilz inspired me to work on a device that non-invasively detects whether a cable is shielded or not. From an economic point of view this device makes absolutely no sense. It was a just-for-fun project to find out whether it can be done or not. Once again I learned a lot.
 
-Cheap audio patch cables often come unshielded today. That means that the second conductor (ground, the shield) is not a mesh of wires wrapped around the signal conductor (as I would expect it from cables for audio). Instead there are just two wires lying next to each other inside the coating. So I was eager to find out whether a cable is shielded or not without cutting it. 
+Cheap audio patch cables often come unshielded. That means that the second conductor (ground, the shield) is not a mesh of wires wrapped around the signal conductor (as I would expect it from cables for audio). Instead there are just two wires lying next to each other inside the coating. So I was eager to find out whether a cable is shielded or not without cutting it. 
 
 ![cables](images/cables.png)
 
